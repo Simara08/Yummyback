@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<main>
+    <section id="enjoy-your">
+        <div class="container">
+            <div class="row food">
+                <div class="col-lg-5 enjoy-summary">
+                    <h2>Enjoy Your Healthy <br> Delicious Food</h2>
+                    <p>
+                        Sed autem laudantium dolores. Voluptatem itaque ea consequatur <br> eveniet.
+                        Eum quas beatae cumque eum quaerat.
+                    </p>
+                    <div>
+                        <button>Book a Table</button>
+                        <a href=""><i class="fa-solid fa-circle-play"></i>Watch Video</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 enjoy-img">
+                    <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/hero-img.png" alt="">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prodct">
+        <div class="container">
+            <div class="row">
+                <div class="product-summary">
+                    <p>OUR MENU</p>
+                    <h2>Check Our Yummy Menu</h2>
+                    <ul>
+                        <li><a href="">Startes</a></li>
+                        <li><a href="">Breakfast</a></li>
+                        <li><a href="">Lunch</a></li>
+                        <li><a href="">Dinner</a></li>
+                    </ul>
+                    <p>MENU</p>
+                    <h3>Starters</h3>
+                </div>
+            </div>
+            <div class="row product-img">
+                @foreach (var pro in Model.Products)
+                {
+                    <div class="col-lg-4 img-item">
+                        <img src="@pro.Url"
+                             alt="">
+                        <h4>@pro.Name</h4>
+                        <p>@pro.Despription</p>
+                        <span>$@pro.Price</span>
+                    </div>
+                }
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="form-section">
+        <div class="container">
+            <div class="form-summary">
+                <p>BOOK A TABLE</p>
+                <h3>Book Your Stay With Us</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 form-img">
+                    <img src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/reservation.jpg" alt="">
+                </div>
+                <div class="col-lg-8">
+                    <form action="#">
+                        <div class="form-input">
+                            <input type="text" placeholder="Your Name">
+                            <input type="text" placeholder="Your Email">
+                            <input type="text" placeholder="Your Phone">
+                        </div>
+                        <div class="form-input">
+                            <input type="text" placeholder=" Date">
+                            <input type="text" placeholder=" Time">
+                            <input type="number" placeholder=" # of people">
+                        </div>
+                        <input class="mes" type="text" placeholder=" Message">
+                        <div>
+                            <button>Book a Table</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
